@@ -26,8 +26,8 @@ find_package(catkin REQUIRED COMPONENTS
 # Generate messages in the 'msg' folder
 add_message_files(
    FILES
-   Pose2DStamped.msg
-   Velocity2DStamped.msg
+   msg_pose2d_stamped.msg
+   msg_velocity2d_stamped.msg
 )
 
 ## Generate services in the 'srv' folder
