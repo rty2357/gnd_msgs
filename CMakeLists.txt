@@ -28,6 +28,7 @@ add_message_files(
    FILES
    msg_pose2d_stamped.msg
    msg_velocity2d_stamped.msg
+   msg_velocity2d_with_covariance_stamped.msg
 )
 
 ## Generate services in the 'srv' folder
