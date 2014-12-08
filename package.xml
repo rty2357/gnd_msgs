@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package>
-  <name>gnd_geometry2d_msgs</name>
+  <name>gnd_msgs</name>
   <version>0.1.0</version>
   <description>
 
-     gnd_geometry2d_msgs
+     gnd_msgs
 
   </description>
   <maintainer email="dummy@dummy.com">tyamada</maintainer>
@@ -15,10 +15,14 @@
 
   <build_depend>geometry_msgs</build_depend>
   <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
   <build_depend>message_generation</build_depend>
 
   <run_depend>geometry_msgs</run_depend>
   <run_depend>std_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
   <run_depend>message_runtime</run_depend>
 
 </package>

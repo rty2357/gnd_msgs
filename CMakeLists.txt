@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gnd_geometry2d_msgs)
+project(gnd_msgs)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
+  sensor_msgs
+  geometry_msgs
   message_generation
 )
 
@@ -29,6 +31,12 @@ add_message_files(
    msg_pose2d_stamped.msg
    msg_velocity2d_stamped.msg
    msg_velocity2d_with_covariance_stamped.msg
+   msg_pointcloud_beamreflection_stamped.msg
+   msg_waypoint_named.msg
+   msg_waypoint_directional_named.msg
+   msg_path_unit_speed_limited.msg
+   msg_path_speed_limited.msg
+   msg_path_net_speed_limited.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -41,7 +49,9 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  std_msgs 
+  std_msgs
+  sensor_msgs
+  geometry_msgs
 )
 
 ###################################
@@ -56,7 +66,10 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES gnd_gyrodometry
-   CATKIN_DEPENDS std_msgs
+   CATKIN_DEPENDS
+    std_msgs
+    sensor_msgs
+    geometry_msgs
 #  DEPENDS system_lib
 )
 
